@@ -37,6 +37,7 @@ span, label {
 
 h1, h2, h3, h4 {
     font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 h1 {
@@ -137,26 +138,23 @@ nav  a {
     min-height: 65rem;
     width: 100vw;
     max-width: 100%;
-    padding-top: 8rem;
 }
 
 .hero__col-1 {
-    z-index: -1;
-    padding: 0 1.6rem;
-    text-align: center;
-    margin-top: 6.4rem;
+    text-align: justify;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+   
+    padding: 0 1.6rem;
 }
 .hero__col-1 > h2 {
     margin-bottom: 2.4rem;
 }
-.hero__col-1 > p , span {
+.hero__col-1  p , span {
     margin-top: 3.2rem;
     font-size: 2.4rem;
-    line-height: 4rem;
+    line-height: 3.2rem;
 }
 .img-container {
     display: flex;
@@ -165,17 +163,59 @@ nav  a {
     overflow: hidden;
     border-radius: 50%;
     width: 350px;
+    min-width: 350px;
     height: 350px;
 
+}
+.hero__content {
+    margin-left: 3.2rem;
+    padding: 10rem;
+}
+.hero__nav-menu {
+    margin-top: 3.2rem;
+    display: flex;
+}
+.hero__link {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin-right: 1.6rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.hero__link:hover {
+    transition: 0.3s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .6);
+}
+.hero__link img {
+    height: 80%;
+    margin: auto;
+}
+#resume-btn {
+    padding: 1.2rem 2.4rem;
+    margin-right: 3.2rem;
+    border-radius: 2.4rem;
+    background-color: #FF6666;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#resume-btn:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .6);
+    transition: 0.3s;
 }
 .profile-img {
     height: 475px;
 }
 .col-2 {
     z-index: -1;
+    position: relative;
     display: flex;
     justify-content: center;
-    height: 100vh;
     z-index: 1;
     background-color: #FF6666;
     padding: 0 1.6rem;
@@ -188,7 +228,7 @@ nav  a {
     margin-top: -5rem;
     border-radius: 1.6rem;
     display: block;
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: #FF6666;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16); 
@@ -214,6 +254,45 @@ nav  a {
 .skills__img > img {
     height: 6.4rem;
     padding-bottom: 1.2rem;
+}
+.tools-col {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tools-col__content {
+    margin: 1.6rem;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    line-height: 3.2rem;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+.container-2 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+.grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tools-col__content > img {
+    padding-top: 0.8rem;
+    width: 50%;
+    height: 50%;
 }
 
 @media only screen and (max-width: 992.98px) {
@@ -305,6 +384,29 @@ nav  a {
         opacity: 0.75;
         transition: 0.6s;
     }
+    .hero__col-1 {
+        padding-top: 10rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .hero__col-1  h2 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+    .hero__col-1 > p , span {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .img-container {
+ 
+        min-width: 250px;
+        width: 250px;
+        height: 250px;
+    
+    }
+    .profile-img {
+        height: 325px;
+    }
     .container {
         flex-direction: column;
     }
@@ -327,17 +429,17 @@ nav  a {
         max-width: 100%;
     }
     .img-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border-radius: 50%;
         width: 200px;
+        min-width: 200px;
         height: 200px;
     
     }
     .profile-img {
         height: 275px;
+    }
+    .tools-col__content {
+        width: 100px;
+        height: 100px;
     }
 }
 
