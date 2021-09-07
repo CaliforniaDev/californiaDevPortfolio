@@ -8,17 +8,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <nav id="top-nav">
             <a href="index.html" class="logo">
-                Logo
+                <img class="logo-icon" src="images/character.svg" alt="californiaDev Logo" />
+                <img class="logo-wordmark" src="images/logo-wordmark.svg" alt="californiaDev" />
             </a>
             <ul id="nav-menu" class="light-font">
-                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">SKILLS & TOOLS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">PROJECTS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">SKILLS & TOOLS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -28,15 +30,57 @@
         </nav>
         <aside>
             <ul id="mobile-nav-menu">
-                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">SKILLS & TOOLS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">SKILLS & TOOLS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">PROJECTS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
             </ul>
         </aside>
+
+        <span class="nav-overlay"></span>
+
         <section id="hero">
+            <header class="hero__col-1">
+                <h2>Web Developer &
+                    UX Designer</h2>
+                    <div class="img-container">
+                        <img class="profile-img" src="images/profile.JPG" />
+                    </div>
+                    <p>Hello, I’m a Front end <span class="blue-font">Developer</span>
+                        that can create interactive prototypes
+                        and craft beautiful robust Web Apps<p>
+            </header>
+        </section>
+        <section id="skills" class="col-2">
+
+            <div class="skills-box">
+                <div class="container">
+                    <div class="skills__col">
+                        <div class="col__content">
+                            <figure class="skills__img">
+                                <img src="images/pen-tool.svg" />
+                            </figure>
+                            <h4>UI / UX Designer</h4>
+                            <p>I created interactive prototypes to insure the best user 
+                                experience possible.</p>
+                        </div>
+                    </div> 
+                    <div class="skills__col">
+                        <div class="col__content">
+                            <figure class="skills__img">
+                                <img src="images/desktop-icon.svg" />
+                            </figure>
+                            <h4>Front end Developer</h4>
+                            <p>After the design process, I enjoy to write clean responsive 
+                                code that renders well on a variety of devices and windows. </p>
+                        </div>
+
+                </div>
+                
+                </div> 
+            </div>
         </section>
         
-        <script src="" async defer></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
