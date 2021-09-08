@@ -372,6 +372,7 @@ nav  a {
 .project-item-description > h4 {
     font-size: 1.8rem;
     line-height: 2rem;
+    padding-bottom: 1.6rem;
 
     color: #f8f8f8;
 }
@@ -386,7 +387,8 @@ ul {
 .project-links {
     color: #444;
     text-decoration: none;
-    margin-top: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
 
 }
 .project-links a {
@@ -576,6 +578,9 @@ ul {
     }
     .project-item {
         flex-direction: column;
+    }
+    .project-item__img-container {
+        margin-bottom: 2.4rem;
     }
     .project-item-description {
         margin-left: 0;
