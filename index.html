@@ -21,7 +21,7 @@
         <ul id="nav-menu" class="light-font">
             <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">SKILLS & TOOLS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects-section">PROJECTS</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
         </ul>
         <div class="hamburger">
@@ -34,7 +34,7 @@
         <ul id="mobile-nav-menu">
             <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">SKILLS & TOOLS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects-section">PROJECTS</a></li>
             <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
         </ul>
     </aside>
@@ -43,21 +43,23 @@
 
     <section id="hero">
         <header class="hero__col-1">
-            <div class="img-container">
+            <div class="profile-img-container">
                 <img class="profile-img" src="images/profile.JPG" />
             </div>
             <div class="hero__content">
-                <h2>Web Developer &
-                    UX Designer</h2>
-                <p>Hello, I’m a Frontend <span class="blue-font">Developer</span>
+                <p>HI THERE! I'M</p>
+                <h2><span id="leo">LEO</span> DANIELS</h2>
+                <p>A <span class="blue-font">Front-end Developer</span>
                     that can create interactive prototypes
-                    and craft beautiful robust Web Apps.
+                    and from that craft beautiful robust Web Apps.
                 </p>
                 <div class="hero__nav-menu">
                     <button id="resume-btn" class="light-font">Resumé</button>
-                    <a class="hero__link"><img src="images/github-icon-link.svg" /></a>
-                    <a class="hero__link"><img src="images/instagram-icon.svg"/></a>
-                    <a class="hero__link"><img src="images/mail-icon.svg"/></a>
+                    <div class="hero__link-container">
+                        <a class="hero__link"><img src="images/github-icon-link.svg" /></a>
+                        <a class="hero__link"><img src="images/instagram-icon.svg"/></a>
+                        <a class="hero__link"><img src="images/mail-icon.svg"/></a>
+                    </div>
                 </div>
                 
             </div>
@@ -66,7 +68,7 @@
     <section id="skills" class="col-2">
 
         <div class="skills-box">
-            <div class="container">
+            <div class="skills-container">
                 <div class="skills__col">
                     <div class="col__content">
                         <figure class="skills__img">
@@ -82,7 +84,7 @@
                         <figure class="skills__img">
                             <img src="images/desktop-icon.svg" />
                         </figure>
-                        <h4>Front end Developer</h4>
+                        <h4>Front-end Developer</h4>
                         <p>After the design process, I enjoy to write clean responsive
                             code that renders well on a variety of devices and windows. </p>
                     </div>
@@ -121,9 +123,53 @@
                         <img src="images/github-icon.svg" />
                         <p>GitHub</p>
                     </span>
+
                 </div>
                     
             </div>
+        </div>
+    </section>
+    <section id="projects-section">
+        <div class="projects-section__head">
+            <h2>Projects</h2>
+        </div>
+        <div class="projects-container">
+            <article class="project-item">
+                <div class="project-item__img-container">
+                    <img src="images/cupkayz-project.png" alt="Cup Kayz" />
+                </div>
+                <div class="project-item-description">
+                    <h3 class="light-font">Cup Kayz</h3>
+                    <h4>Technologies Used: <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>Google API</span></h4>
+                    <ul>
+                        <li>E-commerce web app to purchase baked goods</li>
+                        <li>Uses google maps api to pin point location before checkout of each delivery.</li>
+                        <li>Uses autocomplete feature when entering address for quicker service.</li>
+                        <li>Shopping cart is fun and interactive. Can change remove / add items within the cart.</li>
+                    </ul>
+                    
+
+                </div>
+
+            </article>
+            <article class="project-item">
+                <div class="project-item__img-container">
+                    <img src="images/cupkayz-project.png" alt="Cup Kayz" />
+                </div>
+                <div class="project-item-description">
+                    <h3 class="light-font">Cup Kayz</h3>
+                    <h4>Technologies Used: <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>Google API</span></h4>
+                    <ul>
+                        <li>E-commerce web app to purchase baked goods</li>
+                        <li>Uses google maps api to pin point location before checkout of each delivery.</li>
+                        <li>Uses autocomplete feature when entering address for quicker service.</li>
+                        <li>Shopping cart is fun and interactive. Can change remove / add items within the cart.</li>
+                    </ul>
+                    
+
+                </div>
+
+            </article>
         </div>
     </section>
 
