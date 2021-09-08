@@ -85,58 +85,102 @@ nav {
     padding: 0px;
     position: fixed;
     display: flex;
-    width: 100vw;
-    height: 8rem;
+    width: 100px;
+    height: 100%;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 1.6rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.6rem 0;
     max-width: 100%;
     background-color: #006699;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    transition: 0.3s;
+}
+main {
+    margin-left: 100px;
+    transition: 0.3s;
+}
+main.active-desktop {
+    margin-left: 200px;
+    transition: 0.3s;
+}
+
+nav:hover {
+    width: 200px;
+    transition: 0.3s;
 }
 .logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .logo img:nth-child(1) {
-    height: 6.4rem;
+    height: 5.6rem;
+    margin-bottom: 0.8rem;
 }
 
-.logo img:nth-child(2) {
-    height: 2.4rem;
-    padding-left: 1.6rem;
-}
-
-
-#mobile-nav-menu {
+.logo-wordmark {
+    height: 1.6rem;
     display: none;
 }
+ nav:hover .logo-wordmark{
+    display: block;
+}
+
+
 .hamburger {
     display: none;
 }
 
 #nav-menu {
-    margin: 0px;
+    margin-top: 16rem;
+    margin-bottom: auto;
     padding: 0px;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.6rem;
+    flex-direction: column;
+    text-align: center;
 }
-.nav-item {
-    margin-left: 4.8rem;
+.nav-link {
+    margin-bottom: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    transition: 0.3s;
 }
 
 
 nav  a {
     text-decoration: none;
-    color: #f8f8f8
+    color: #f8f8f8;
+}
+.nav-item-name {
+    font-size: 1.4rem;
+    display: none;
+    transition: 0.3s;
+ 
+}
+.nav-link:hover {
+    background-color: #007cb9;
 
 }
+nav:hover .nav-link {
+    padding: 1.2rem 0;
+    justify-content: flex-start;
+    transition: 0.3s;
+}
 
-
+nav:hover .nav-link img {
+    padding-right: 3.2rem;
+    padding-left: 1.6rem;
+    transition: 0.3s;
+}
+nav:hover .nav-item-name {
+    display: inline-block;
+    transition: 0.3s;
+}
 
 
 
@@ -329,17 +373,13 @@ nav  a {
 }
 
 
-#projects-section {
-    padding: 8rem;
-}
-
 .projects-section__head {
-    margin-bottom: 5rem;
+    margin-bottom: 3.2rem;
 }
 .projects-container {
     display: flex;
     flex-direction: column;
-    background-color: #006699;
+    background-color: #FFCC66;
     border-radius: 1.6rem;
     padding: 4.8rem;
     
@@ -418,82 +458,120 @@ ul {
 
 
 
-
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #FF6666;
+    color: #444;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 2.4rem ;
+    margin-top: 1.6rem;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #fc7575;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .form-container {
+    background-color: #006699;
+    padding: 20px;
+  }
 
 
 @media only screen and (max-width: 992.98px) {
-
-    #nav-menu {
-        display: none;
+    nav {
+       left: -200px;
+       transition: 0.3s;
+    }
+    nav.active .logo-wordmark{
+        display: block;
+    }
+    main {
+        transition: 0.3s;
+    }
+    main.active-desktop {
+        margin-left: 0;
+    }
+    nav.active {
+        left: 0;
+        width: 200px;
+        transition: 0.3s;
+    }
+    nav.active .nav-link {
+        padding: 1.2rem 0;
+        justify-content: flex-start;
+        transition: 0.3s;
+    }
+    
+    nav.active .nav-link img {
+        padding-right: 3.2rem;
+        padding-left: 1.6rem;
+        transition: 0.3s;
+    }
+    nav.active .nav-item-name {
+        display: inline-block;
+    }
+    main.active {
+        margin-left: 100px;
+        position: absolute;
+        transition: 0.3s;
+    }
+    main {
+        margin-left: 0;
     }
     .hamburger {
+        z-index: 200;
         display: block;
+        position: fixed;
+        right: 1.6rem;
+        top: 1.6rem;
         cursor: pointer;
     }
     .bar {
         display: block;
-        width: 2.5rem;
-        height: 0.3rem;
+        width: 4rem;
+        height: .5rem;
         margin: 0.5rem auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background-color: #f9f8f6;
+        background-color: #444;
     }
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
         background-color: #FF6666;
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
         background-color: #FF6666;
     }
     .hamburger:hover .bar {
         background-color: #FF6666;
     }
-    
-    #mobile-nav-menu {
-        z-index: 99;
-        right: -100vw;
-        padding: 0px;
-        width: 50vw;
-        max-width: 50%;
-        display: flex;
-        position: fixed;
-        align-items: flex-end;
-        margin-top: 8rem;
-        text-align: center;
-        list-style-type: none;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: 0.3s;
-        background-color: #006699;
-    }
-
     .nav-item a {
         text-decoration: none;
         color: #f8f8f8;
     }
-    .nav-item {
-        text-align: right;
-        transition: 0.3s;
-        padding: 1.6rem 1.6rem;
-        width: 100%;;
-        height: 100%;
-    }
-    .nav-item:hover {
-        cursor: pointer;
-        transition: 0.3s;
-        background-color: #015b88;
-    }
 
-    #mobile-nav-menu.active {
-        right: 0;
-        opacity: 1;
-    }
     .nav-overlay {
         z-index: -1;
         opacity: 0;
@@ -505,7 +583,7 @@ ul {
         transition: 0.6s;
     }
     .nav-overlay.active {
-        z-index: 2;
+        z-index: 50;
         opacity: 0.75;
         transition: 0.6s;
     }
@@ -568,6 +646,7 @@ ul {
     .col__content h4 {
         font-size: 2.4rem;
         padding-bottom: 1.6rem;
+        
     }
     .container-2 h4 {
         font-size: 2.4rem;
@@ -575,6 +654,12 @@ ul {
     .tools-col__content {
         width: 100px;
         height: 100px;
+    }
+    .projects-section__head {
+        margin-left: 1.6rem;
+    }
+    .projects-section__head h2 {
+        font-size: 3.2rem;
     }
     .project-item {
         flex-direction: column;
@@ -588,21 +673,13 @@ ul {
     .project-item-description h3 {
         font-size: 2.8rem;
     }
+    
 
 
 }
 
 @media only screen and (max-width: 768px) {
-    .logo img:nth-child(2) {
-        display: none;
-    }
-    .logo img:nth-child(1) {
-        height: 4.8rem;
-    }
-    #mobile-nav-menu {
-        width: 100vw;
-        max-width: 100%;
-    }
+
     .profile-img-container {
         width: 200px;
         min-width: 200px;
@@ -623,7 +700,7 @@ ul {
 
     
     #projects-section {
-        padding: 5rem 0 0 1.6rem;
+        padding: 5rem 0 0 0;
         background-color: transparent;
     }
     

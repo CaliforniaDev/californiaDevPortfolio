@@ -19,26 +19,30 @@
             <img class="logo-wordmark" src="images/logo-wordmark.svg" alt="californiaDev" />
         </a>
         <ul id="nav-menu" class="light-font">
-            <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">SKILLS & TOOLS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects-section">PROJECTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-    <aside>
-        <ul id="mobile-nav-menu">
-            <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">SKILLS & TOOLS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects-section">PROJECTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
-        </ul>
-    </aside>
+            <li class="nav-item"><a class="nav-link" href="#hero">
+                <img src="images/home_white_24dp.svg" />
+                <span class="nav-item-name">HOME</span></a></li>
 
+            <li class="nav-item"><a class="nav-link" href="#skills">
+                <img src="images/code_white_24dp.svg" />
+                <span class="nav-item-name">SKILLS</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects-section">
+                <img src="images/media_white_24dp.svg" />
+                <span class="nav-item-name">PROJECTS</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">
+                <img src="images/email_white_24dp.svg" />
+                <span class="nav-item-name">CONTACT</span></a></li>
+        </ul>
+    </nav>
+<main>
+
+
+    
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
     <span class="nav-overlay"></span>
 
     <section id="hero">
@@ -54,7 +58,7 @@
                     and from that craft beautiful robust Web Apps.
                 </p>
                 <div class="hero__nav-menu">
-                    <button id="resume-btn" class="light-font">Resumé</button>
+                    <a href="./resume.pdf" target="_blank" id="resume-btn" class="light-font">Resumé</a>
                     <div class="hero__link-container">
                         <a href="https://github.com/CaliforniaDev" target="_blank" class="hero__link">
                             <img src="images/github-icon-link.svg" /></a>
@@ -132,10 +136,11 @@
         </div>
     </section>
     <section id="projects-section">
-        <div class="projects-section__head">
-            <h2>Projects</h2>
-        </div>
+
         <div class="projects-container">
+            <div class="projects-section__head">
+                <h2>Projects</h2>
+            </div>
             <article class="project-item">
                 <div class="project-item__img-container">
                     <a href="https://californiadev.github.io/CupkayzV2.0/" target="_blank">
@@ -217,6 +222,24 @@
             </article>
         </div>
     </section>
+    <section id="contact" class="form-container">
+            <form class="contact-form" action="contact-form.php" method="post">
+          
+              <label class="light-font" for="fname">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              <label class="light-font" for="mail">Email</label>
+              <input type="text" id="mail" name="firstname" placeholder="Your e-mail..">
+              <label class="light-font" for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject">
+          
+              <label class="light-font" for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" name="submit" value="Submit">
+          
+            </form>
+    </section>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
