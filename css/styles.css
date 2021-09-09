@@ -134,9 +134,9 @@ nav:hover {
 }
 
 #nav-menu {
-    margin-top: 16rem;
     margin-bottom: auto;
-    padding: 0px;
+    margin-top: auto;
+    padding-bottom: 8rem;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -182,11 +182,13 @@ nav:hover .nav-item-name {
     transition: 0.3s;
 }
 
-
-
-
-
+main {
+    height: var(--app-height);
+}
 #hero {
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
     height: var(--app-height);
     min-height: 70rem;
     width: 100vw;
@@ -194,10 +196,9 @@ nav:hover .nav-item-name {
 }
 
 .hero__col-1 {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin: 0 1.6rem;
     padding: 0 1.6rem;
 }
