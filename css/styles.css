@@ -606,6 +606,7 @@ input[type=text], select, textarea {
         margin: 0 0 0 0 ;
     }
     .hero__col-1  h2 {
+        margin-bottom: 0.8rem;
         font-size: 2.4rem;
         line-height: 3.2rem;
     }
@@ -640,6 +641,9 @@ input[type=text], select, textarea {
     .skills__col {
         flex-basis: auto;
         width: auto;
+    }
+    .col__content {
+        padding: 0;
     }
     .col__content p {
         font-size: 1.6rem;
