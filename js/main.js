@@ -51,5 +51,7 @@
             }, 500);
             return false;
         });
+
+        $("img").on("dragstart", function(event) {event.preventDefault();});
     }
     }())
