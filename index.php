@@ -232,7 +232,7 @@
               <label class="light-font" for="fname">Full name</label>
               <input type="text" id="name" name="name" placeholder="Your name..">
               <label class="light-font" for="mail">Email</label>
-              <input type="text" id="mail" name="firstname" placeholder="Your e-mail..">
+              <input type="text" id="mail" name="mail" placeholder="Your e-mail..">
               <label class="light-font" for="subject">Subject</label>
               <input type="text" id="subject" name="subject" placeholder="Subject">
           
